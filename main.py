@@ -2,7 +2,7 @@ import streamlit as st
 import pyrebase
 from google.cloud import firestore
 
-ap_signup_version = "1.0.0"
+ap_signup_version = "1.0.1"
 signup_form_submitted = False
 
 st.set_page_config(
@@ -51,8 +51,8 @@ def sign_up():
             st.form_submit_button("Sign up", on_click=password_entered)
             st.caption("⬆️ Press it twice (not rapidly, though)")
         with st.expander("ℹ️ Pricing"):
-            st.write("""AlphaPredictPro - Uses GPT-3.5 and is optimized for speed, but may be less accurate.""")
-            st.write("AlphaPredictMax - Uses GPT-4o for more detailed, logical, and accurate insights.")
+            st.write("""AlphaPredictPro - Uses GPT-3.5 and is optimized for speed, but may be less accurate. - $7/month""")
+            st.write("AlphaPredictMax - Uses GPT-4o for more detailed, logical, and accurate insights - $15/month")
 
     def password_entered():
         form_submitted = True
